@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         document.addEventListener('DOMContentLoaded',async()=>{
+        
+            const url=`http://localhost:8000/articledata/${window.location.pathname.split('/')[2]}`
+           const data= await fetch(url).then((a)=>a.json()).then((b)=>{return b})
+           console.log(data)
+        const app=document.querySelectorAll('.content')[0]
+
+        const child=document.createElement('p')
+        child.innerHTML=data.detail
+        app.appendChild(child)
+
+         })
+    </script>
+</head>
+<body>
+    <h1>Detaiils</h1>
+    <div class="content"></div>
+    <div>
+        <form action="/articledata/comments/post" method="post">
+            <input type="text"  name="name" placeholder="Enter the name you want to display">
+            <textarea name="comment" style="resize: none; width: 500px; aspect-ratio: 1/0.3;"></textarea>
+            <input type="submit" value="Post">
+        </form>
+    </div>
+</body>
+</html>

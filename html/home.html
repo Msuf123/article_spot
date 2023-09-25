@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        document.addEventListener('DOMContentLoaded',async()=>{
+            console.log('Hi there')
+           const data= await fetch('http://localhost:8000/articledata').then((a)=>a.json()).then((b)=>{return b})
+           console.log(data)
+        const app=document.querySelectorAll('.content')[1]
+for(let i=0;i<data.length;i++){
+        const child=document.createElement('a')
+        child.innerHTML=data[i].heading
+        child.setAttribute('href',`article/00${i+1}`)
+        app.appendChild(child)
+
+        }})
+        
+
+
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Article Hub</h1>
+    <div class="content">
+  <span>a</span>
+    </div>
+    <div class="content">
+<span>b</span>
+    </div>
+</body>
+</html>

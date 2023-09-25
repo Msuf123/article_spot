@@ -1,0 +1,19 @@
+[
+    {    "id":"001",
+        "heading":"Sahil the cunning lizard",
+        "detail":"Hi my name is sahil in genreal cse student",
+        "comment":[
+            {"userName":"Akshat","comment":"Very accurate article"},
+        ]
+    },
+    {"id":"002",
+        "heading":"Shubam the freelancer",
+       "detail":"My name is shubam copy paste master"
+    },
+    {"id":"003",
+        "heading":"Rathi the toxicicator",
+        "detail":"I am rathi "    
+    },
+    {"id":"005","heading":"Abhinav the sleeping legend","detail":"My anme is bhalu"},
+    {"id":"006","heading":"Akshat the visionary","detail":"A genious"}
+]
